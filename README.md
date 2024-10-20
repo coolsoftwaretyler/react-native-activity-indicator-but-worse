@@ -4,9 +4,7 @@ A worse version of the built-in ActivityIndicator component for React Native
 
 ## Installation
 
-```sh
-npm install react-native-activity-indicator-but-worse
-```
+TBD
 
 ## Usage
 
