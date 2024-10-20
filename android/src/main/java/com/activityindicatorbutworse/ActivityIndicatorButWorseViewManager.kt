@@ -1,5 +1,6 @@
 package com.activityindicatorbutworse
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.SimpleViewManager
@@ -32,7 +33,9 @@ class ActivityIndicatorButWorseViewManager : SimpleViewManager<ActivityIndicator
 
   @ReactProp(name = "color")
   override fun setColor(view: ActivityIndicatorButWorseView?, color: String?) {
-    view?.setBackgroundColor(Color.parseColor(color))
+    color?.let {
+      view?.indeterminateTintList = ColorStateList.valueOf(Color.parseColor(it))
+    }
   }
 
   companion object {
